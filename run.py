@@ -19,3 +19,29 @@ Question index incremented by one.
 
 """
 
+def getnextQuestion():
+
+    user_guesses = []
+    correct_guesses = 0
+    question_index = 0
+
+    for key in questions:
+        print("-------")
+        print(key)
+        for i in options[question_index]: 
+            print(i)
+            
+        question_index += 1
+
+
+
+
+
+
+"""
+
+Calls all game functions in main function
+"""
+if __name__ == '__main__':
+    getnextQuestion()
+    takeUserGuess()
