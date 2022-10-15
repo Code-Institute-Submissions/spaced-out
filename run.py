@@ -33,9 +33,14 @@ def getnextQuestion():
             
         question_index += 1
 
+"""
+User to enter guess
+User can enter lower case letters
 
-
-
+"""
+def takeUserGuess():
+    guess = input("Enter(A, B or C:)")
+    guess = guess.lower()
 
 
 """
