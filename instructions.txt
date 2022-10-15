@@ -1,6 +1,6 @@
 
 
-display dictionary of questions and option to the user. 
+Display dictionary of questions and options to the user. 
 
 
 Game functions:
