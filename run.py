@@ -1,67 +1,68 @@
 questions = {
-    "How much do NASA space suits cost?: ": "A.",
-    "How many moons are in our solar system?: ": "B.",
-    "Which is the brightest planet in the night sky?: ": "C.",
-    "How long is one year on Jupiter?: ": "A."
+        "How much do NASA space suits cost?: ": "A.",
+        "How many moons are in our solar system?: ": "B.",
+        "Which is the brightest planet in the night sky?: ": "C.",
+        "How long is one year on Jupiter?: ": "A."
 }
 
 options = [
         ["A. 12 million dollars?", "B. 20 million dollars?"],
         ["A. 100 moons?", "B. 181 mooons?", "C. 300 moons?"],
         ["A. Mars?", "B. Neptune?", "C. venus?"],
-        ["A. 12 years?", "6 years?", "C. 8 years?"]
+        ["A. 12 years?", "B. 6 years?", "C. 8 years?"]
 ]
 """
 show user next question from dictionary of 
 questions.
 Question index incremented by one.
-
-
 """
-
 def get_next_question():
 
-    user_guesses = []
+    guesses = []
     correct_guesses = 0
-    question_index = 0
+    question_index = 1
 
     for key in questions:
         print("-------")
         print(key)
         for i in options[question_index-1]: 
             print(i)
-       
-        question_index += 1
+        guess = input("Enter (A, B, or C): ")
+        guess = guess.lower()
+        guesses.append(guess)
+
+        correct_guesses += check_answer(questions.get(key), guess)
+        question_index += 1    
 
 """
 
-User to enter guess 
-"""
-def take_user_answer():
-    
-    user_guess = input("Enter(A. B. or C.)")
-    user_guess = user_guess.lower()
-    user_guesses.append(user_guess)
-    
+Check users answer from the 
+check answer function, call it in the
+get next question function. with parameters (answer ,guess),
+getting the questions KEY, and guess
+if statement to comare if answer and are guees and equal
+if not "not correct!"
 """
 
-Checks users answer and users guess in the 
-empty user guess variable.
-"""
+def user_input():
+    pass
 
-def check_user_answer(user_guess):
-    if user_guess == user_guesses:
-        print("correct!")
+def check_answer(answer, guess):
+
+    if answer == guess:
+        print("Correct!")
         return 1
     else:
         print("Wrong!")
-        return 0 
-    
+        return 0
+
+
+def get_users_score():
+    pass
+
 """
 
 Calls all game functions in main function
 """
 if __name__ == '__main__':
     get_next_question()
-    take_user_answer()
-    check_user_answer(questions.get(key),user_guess)
