@@ -38,7 +38,6 @@ def check_answer(answer, guess):
         print("Wrong!")
         return 0
 
-
 def display_score(correct_guesses, guesses):
     """
     Takes value from correct guesses variable 
