@@ -1,35 +1,42 @@
 """
 Print welcome message to the user.
+User To enter name.
 """
-print("Welcome to Spaced out!👽 ")
-print("Compare you knowledge with the 10 questions, Good luck!👾")
-playing = input("Press any key to start! ")
-if playing == playing:
-    print("Lets play!🚀")
+welcome = input("ENTER YOUR NAME PLEASE! :")
+print("-----------------------------------")
+print(f"HELLO {welcome}")
+print("-----------------------------------")
+print("WELCOME TO SPACED OUT!👽 ")
+print("-----------------------------------")
+print(f"{welcome} COMPARE YOUR KNOWLEDGE TO THE 10 QUESTIONS, GOOD LUCK!👾 ")
+print("-----------------------------------")
+playing = input("PRESS ANY KEY TO START! ")
+
 def get_next_question():
     """
 
     Print question and options to the user.
     Increment question index by 1.
-    The variable = guess, gives input to the user to enter correct answer.
+    The variable = user_guess, gives input to the user to enter correct answer.
+    user_guess to give user input, Enter A,B or C.
     """
     guesses = []
     correct_guesses = 0
-    question_index = 1
-
+    options_index = 1
     for key in questions:
         print("-------")
         print(key)
-        for i in options[question_index-1]:
+        for i in options[options_index-1]:
             print(i)
-        guess = input("Enter (A, B, or C):\n ")
-        guess = guess.upper()
-        guesses.append(guess)
+        user_guess = input("Enter (A, B, or C):\n ")
+        user_guess = user_guess.upper()
+        guesses.append(user_guess)
 
-        correct_guesses += check_answer(questions.get(key), guess)
-        question_index += 1
+        correct_guesses += check_answer(questions.get(key), user_guess)
+        options_index += 1
+
     display_result(correct_guesses, guesses)
-def check_answer(answer, guesses):
+def check_answer(answer, user_guess):
     """
     Check users_answer from the
     check_answer function, called it in the
@@ -38,7 +45,7 @@ def check_answer(answer, guesses):
     if statement to comare if answer and are guees and equal
     if not "not correct!".
     """
-    if answer == guesses:
+    if answer == user_guess:
         print("wrong")
         return True
     else:
@@ -67,7 +74,6 @@ def end_game():
     End of game function
     """
     print("End of game!")
-
 questions = {
     "How much do NASA space suits cost?": "A.",
     "How many moons are in our solar system?": "B.",
@@ -97,7 +103,5 @@ def main():
     check_answer()
     display_result()
     end_game()
-    
-
 if __name__ == '__main__':
     main()
