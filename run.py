@@ -2,16 +2,19 @@
 Print welcome message to the user.
 User To enter name.
 """
-welcome = input("ENTER YOUR NAME PLEASE! :")
+import time
+count = "5 4 3 2 1"
+for i in count:
+    print(i)
+    time.sleep(0.5)
+welcome = input("PLEASE ENTER YOUR NAME! :")
 print("-----------------------------------")
 print(f"HELLO {welcome}")
 print("-----------------------------------")
 print("WELCOME TO SPACED OUT!👽 ")
 print("-----------------------------------")
 print(f"{welcome} COMPARE YOUR KNOWLEDGE TO THE 10 QUESTIONS, GOOD LUCK!👾 ")
-print("-----------------------------------")
 playing = input("PRESS ANY KEY TO START! ")
-
 def get_next_question():
     """
 
@@ -45,11 +48,13 @@ def check_answer(answer, user_guess):
     if statement to comare if answer and are guees and equal
     if not "not correct!".
     """
+    
     if answer == user_guess:
-        print("wrong")
+        user_guess += 1
+        print("")
         return True
     else:
-        print("correct!")
+        print("")
         return False
 def display_result(correct_guesses, guesses):
     """
