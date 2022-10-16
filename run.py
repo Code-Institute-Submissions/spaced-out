@@ -63,6 +63,11 @@ def display_result(correct_guesses, guesses):
     print("YOUR GUESSES:")
     for i in guesses:
         print(i)
+    def end_game():
+    """
+    End of game function
+    """
+    print("End of game!")
 
 questions = {
     "How much do NASA space suits cost?": "A.",
