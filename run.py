@@ -1,11 +1,11 @@
 """
 Print welcome message to the user.
 """
-print("Welcome to Sapced out!")
+print("Welcome to Spaced out!👽 ")
+print("Compare you knowledge with the 10 questions, Good luck!👾")
 playing = input("Press any key to start! ")
 if playing == playing:
     print("Lets play!🚀")
-
 def get_next_question():
     """
 
@@ -29,7 +29,6 @@ def get_next_question():
         correct_guesses += check_answer(questions.get(key), guess)
         question_index += 1
     display_result(correct_guesses, guesses)
-
 def check_answer(answer, guesses):
     """
     Check users_answer from the
@@ -45,7 +44,6 @@ def check_answer(answer, guesses):
     else:
         print("correct!")
         return False
-
 def display_result(correct_guesses, guesses):
     """
     Takes value from correct guesses variable
@@ -63,8 +61,9 @@ def display_result(correct_guesses, guesses):
     print("YOUR GUESSES:")
     for i in guesses:
         print(i)
-    def end_game():
+def end_game():
     """
+
     End of game function
     """
     print("End of game!")
@@ -74,20 +73,31 @@ questions = {
     "How many moons are in our solar system?": "B.",
     "Which is the brightest planet in the night sky?": "C.",
     "How long is one year on Jupiter? ": "A.",
-    "Which planet is closest in size to Earth?": "A."
+    "Which planet is closest in size to Earth?": "A.",
+    "Which planet is named after the Roman god of war?": "C.",
+    "How many engines are on a space shuttle?": "B.",
+    "What country put a man intp sapce first?": "A.",
+    "What colour is the heat sheild facing the sun?": "C.",
+    "What contributes towards space being so dark?": "C."
 }
 options = [
         ["A. 12 million dollars?", "B. 20 million dollars?"],
         ["A. 100 moons?", "B. 181 mooons?"],
         ["A. Mars?", "B. Neptune?", "C.venus?"],
         ["A. 12 years?", "B. 6 years?", "C.8 years?"],
-        ["A.Mars?", "B.Venus?"]
+        ["A. Mars?", "B.Venus?"],
+        ["A. Saturn?", "B.venmus?", "C. Mars?"],
+        ["A. Three?", "B. Two", "C. One?"],
+        ["A. Russia?", "B. USA?", "C. China?"],
+        ["A. black?", "B. Grey?", "C. White?"],
+        ["A. Not enough light?", "B. to big?", "C. It's a vacuum?"]
 ]
 def main():
     get_next_question()
     check_answer()
     display_result()
     end_game()
+    
 
 if __name__ == '__main__':
     main()

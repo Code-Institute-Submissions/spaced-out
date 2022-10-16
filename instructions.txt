@@ -14,5 +14,6 @@ GAME FUNCTIONS:
 - Check answer function takes the answer and the users guess. If statement to give user input is eqaul to correct answer.
 - If correct print "Correct". else "Wrong"
 - Display score. Prints a result message, prints correct answer annd users guesses. 
+- End of game function is called. 
 
 
