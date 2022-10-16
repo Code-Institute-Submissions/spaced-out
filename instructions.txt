@@ -1,15 +1,18 @@
+GAME FUNCTIONS:
+
+- get_next_question
+
+- check_answer
+
+- display_score
 
 
-Display dictionary of questions and options to the user. 
+- Increament question index by 1
+- For loop to print the KEY in the dictionary of questions. This will print the firs question.
+- For loop to show options for selecting the correct answer to user. Options are set in a 2d list.
+- Input is run after for loop. User can add correct answer.
+- Check answer function takes the answer and the users guess. If statement to give user input is eqaul to correct answer.
+- If correct print "Correct". else "Wrong"
+- Display score. Prints a result message, prints correct answer annd users guesses. 
 
 
-Game functions:
-
-
-- DisplayNextQuestion
-
-- takeUserInput
-
-- checkUserAnswer
-
-- displayResult
