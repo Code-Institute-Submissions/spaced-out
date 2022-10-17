@@ -2,6 +2,7 @@
 Print welcome message to the user.
 User To enter name.
 """
+start_game = input("PRESS TO START!")
 import time
 count = "5 4 3 2 1"
 for i in count:
@@ -48,7 +49,6 @@ def check_answer(answer, user_guess):
     if statement to comare if answer and are guees and equal
     if not "not correct!".
     """
-    
     if answer == user_guess:
         user_guess += 1
         print("")
@@ -75,10 +75,10 @@ def display_result(correct_guesses, guesses):
         print(i)
 def end_game():
     """
-
-    End of game function
+    End of game function.
     """
-    print("End of game!")
+print("End of game!")
+
 questions = {
     "How much do NASA space suits cost?": "A.",
     "How many moons are in our solar system?": "B.",
