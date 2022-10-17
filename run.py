@@ -1,13 +1,9 @@
-"""
-Print welcome message to the user.
-User To enter name.
-"""
-start_game = input("PRESS TO START!")
 import time
-count = "5 4 3 2 1"
-for i in count:
+start_game = input("PRESS TO START!")
+timer = "5 4 3 2 1"
+for i in timer:
     print(i)
-    time.sleep(0.5)
+    time.sleep(0.3)
 welcome = input("PLEASE ENTER YOUR NAME! :")
 print("-----------------------------------")
 print(f"HELLO {welcome}")
@@ -16,6 +12,8 @@ print("WELCOME TO SPACED OUT!👽 ")
 print("-----------------------------------")
 print(f"{welcome} COMPARE YOUR KNOWLEDGE TO THE 10 QUESTIONS, GOOD LUCK!👾 ")
 playing = input("PRESS ANY KEY TO START! ")
+
+
 def get_next_question():
     """
 
@@ -40,14 +38,13 @@ def get_next_question():
         options_index += 1
 
     display_result(correct_guesses, guesses)
+
+
 def check_answer(answer, user_guess):
     """
-    Check users_answer from the
-    check_answer function, called it in the
-    get next_question function, with parameters (answer ,guess),
-    getting the questions KEY, and guess
-    if statement to comare if answer and are guees and equal
-    if not "not correct!".
+    Takes data from user_guess and compares
+    if an if statement if answer is equal to user_answer.
+    Print statement left blank.
     """
     if answer == user_guess:
         user_guess += 1
@@ -56,12 +53,14 @@ def check_answer(answer, user_guess):
     else:
         print("")
         return False
+
+
 def display_result(correct_guesses, guesses):
     """
     Takes value from correct guesses variable
     and guesses list as parameters.
     Displays guesses and answers to the
-    user and the end of the game.
+    user at the end of the game.
     """
     print("--------------")
     print("RESULT!")
@@ -73,11 +72,14 @@ def display_result(correct_guesses, guesses):
     print("YOUR GUESSES:")
     for i in guesses:
         print(i)
+
+
 def end_game():
     """
     End of game function.
     """
-print("End of game!")
+    print("End of game!")
+
 
 questions = {
     "How much do NASA space suits cost?": "A.",
@@ -103,10 +105,18 @@ options = [
         ["A. black?", "B. Grey?", "C. White?"],
         ["A. Not enough light?", "B. to big?", "C. It's a vacuum?"]
 ]
+
+
 def main():
+    """
+    Calling all game functions.
+    """
     get_next_question()
     check_answer()
     display_result()
     end_game()
+
+
 if __name__ == '__main__':
-    main()
+
+main()
