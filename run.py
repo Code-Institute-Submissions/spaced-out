@@ -113,7 +113,7 @@ def main():
     Calling all game functions.
     """
     get_next_question()
-    check_answer(user_guess)
+    check_answer()
     display_result()
     end_game()
 
