@@ -34,7 +34,7 @@ def get_next_question():
         user_guess = user_guess.upper()
         guesses.append(user_guess)
 
-        correct_guesses += check_answer(questions.get(key), user_guess)
+        correct_guesses = check_answer(questions.get(key), user_guess)
         options_index += 1
 
     display_result(correct_guesses, guesses)
@@ -109,14 +109,13 @@ options = [
 
 def main():
     """
+
     Calling all game functions.
     """
     get_next_question()
-    check_answer()
+    check_answer(user_guess)
     display_result()
     end_game()
 
-
-if __name__ == '__main__':
 
 main()
